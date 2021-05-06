@@ -31,3 +31,6 @@ about.py - window for the program description
 forall.py - window for the calculation of power in all regions
 WindPowerApp.exe - Application execution 
 WindPowerApp.py - Python file of the program 
+
+Main window design:
+![image](https://user-images.githubusercontent.com/29367757/117279763-45035e80-ae1f-11eb-8e58-f9dc294ac547.png)
