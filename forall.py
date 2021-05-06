@@ -14,10 +14,12 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def __init__(self, message):
         self.message = message
-        print("MY MESSAGE "+message[0])
     def setupUi(self, Form):
-        Form.setObjectName("Form")
-        Form.resize(558, 784)
+        Form.setObjectName("Wind Power Calculator")
+        Form.resize(650, 784)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("main.png"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        Form.setWindowIcon(icon)
         self.label_2 = QtWidgets.QLabel(Form)
         self.label_2.setGeometry(QtCore.QRect(90, 80, 141, 41))
         font = QtGui.QFont()
@@ -268,7 +270,7 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
-        Form.setWindowTitle(_translate("Form", "Form"))
+        Form.setWindowTitle(_translate("Form", "Wind Power Calculator"))
         self.label_2.setText(_translate("Form", "Akmola Region"))
         self.label_3.setText(_translate("Form", "Aktobe Region"))
         self.label_4.setText(_translate("Form", "Almaty Region"))
@@ -286,25 +288,25 @@ class Ui_Form(object):
         self.label_16.setText(_translate("Form", "Kyzylorda Region"))
         self.label_17.setText(_translate("Form", "Kostanay Region"))
         self.label_18.setText(_translate("Form", "West Kazakhstan Region"))
-        self.label_19.setText(self.message[0])
-        self.label_20.setText(self.message[1])
-        self.label_21.setText(self.message[2])
-        self.label_22.setText(self.message[3])
-        self.label_23.setText(self.message[4])
-        self.label_24.setText(self.message[5])
-        self.label_25.setText(self.message[6])
-        self.label_26.setText(self.message[7])
-        self.label_27.setText(self.message[8])
-        self.label_28.setText(self.message[9])
-        self.label_29.setText(self.message[10])
-        self.label_30.setText(self.message[11])
-        self.label_31.setText(self.message[12])
-        self.label_32.setText(self.message[13])
-        self.label_33.setText(self.message[14])
-        self.label_34.setText(self.message[15])
+        self.label_19.setText(self.message[0]) #+
+        self.label_20.setText(self.message[1])#+
+        self.label_21.setText(self.message[2])#+
+        self.label_22.setText(self.message[15])
+        self.label_23.setText(self.message[5])
+        self.label_24.setText(self.message[13])
+        self.label_25.setText(self.message[7])
+        self.label_26.setText(self.message[11])
+        self.label_27.setText(self.message[3])
+        self.label_28.setText(self.message[6])
+        self.label_29.setText(self.message[4])
+        self.label_30.setText(self.message[8])
+        self.label_31.setText(self.message[9])
+        self.label_32.setText(self.message[14])
+        self.label_33.setText(self.message[12])
+        self.label_34.setText(self.message[10])
         self.label_35.setText(self.message[16])
-        self.label.setText(_translate("Form", "Total Power is: "))
-
+        self.label.setText(_translate("Form", "Total Power is: "+ self.message[17]))
+        self.label.adjustSize()
 
 if __name__ == "__main__":
     import sys
